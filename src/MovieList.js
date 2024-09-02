@@ -7,6 +7,7 @@ class MovieList extends Component {
     this.state = {
       movies: [
         {
+          id:1,
           title: "The Avengers",
           plot: "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
           poster:
@@ -18,6 +19,7 @@ class MovieList extends Component {
           isInCart: false,
         },
         {
+          id:2,
           title: "The Dark Knight",
           plot: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
           poster:
@@ -29,6 +31,7 @@ class MovieList extends Component {
           isInCart: false,
         },
         {
+          id:3,
           title: "Iron Man",
           plot: "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
           poster:
@@ -94,6 +97,7 @@ class MovieList extends Component {
             decStars={this.handleDecStars}
             handleFav={this.handleToggleFav}
             handleCart={this.handleToggleCart}
+            key={movie.id}
           />
         ))}
       </>
